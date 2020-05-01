@@ -45,3 +45,53 @@ Similarly, when floating-point data and char data are passed, it knows the argum
 In this program, instead of calling a function by passing a value, a **call by reference** is issued.
 
 The ```Swap()``` function template takes two arguments and swaps them by reference.
+
+
+## Class Templates
+Like function templates, you can also create class templates for generic class operations. When a class uses the concept of Template, then the class is known as generic class.
+
+Sometimes, you need a class implementation that is same for all classes, only the data types used are different.
+
+### Syntax of Function Template
+```
+template <class T>
+class className
+{
+   ... .. ...
+public:
+   T var;
+   T someOperation(T arg);
+   ... .. ...
+};
+```
+In the above declaration, ```T``` is the template argument which is a placeholder for the data type used.
+
+Inside the class body, a member variable ```var``` and a member function ```someOperation()``` are both of type ```T```.
+
+### How to create a class template object?
+To create a class template object, you need to define the data type inside a ```< >``` when creation.
+
+```className<dataType> classObject;```
+**For example:**
+```
+className<int> classObject;
+className<float> classObject;
+className<string> classObject;
+```
+
+[Example 3: Simple calculator using Class template](ClassTemplate_SimpleCalculator.cpp)
+
+In the above program, a class template ```Calculator``` is declared.
+
+The class contains two private members of type ```T```: ```num1``` & ```num2```, and a constructor to initalize the members.
+
+It also contains public member functions to calculate the addition, subtraction, multiplication and division of the numbers which return the value of data type defined by the user. Likewise, a function ```displayResult()``` to display the final output to the screen.
+
+In the ```main()``` function, two different ```Calculator``` objects ```intCalc``` and ```floatCalc``` are created for data types: ```int``` and ```float``` respectively. The values are initialized using the constructor.
+
+Notice we use ```<int>``` and ```<float>``` while creating the objects. These tell the compiler the data type used for the class creation.
+
+This creates a class definition each for ```int``` and ```float```, which are then used accordingly.
+
+Then, ```displayResult()``` of both objects is called which performs the Calculator operations and displays the output.
+
