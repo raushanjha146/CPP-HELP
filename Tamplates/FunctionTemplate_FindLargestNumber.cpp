@@ -32,3 +32,22 @@ int main()
 
 	return 0;
 }
+
+/*
+Output :
+
+Enter two integers:
+5
+10
+10 is larger.
+
+Enter two floating-point numbers:
+12.4
+10.2
+12.4 is larger.
+
+Enter two characters:
+z
+Z
+z has larger ASCII value.
+*/
