@@ -77,9 +77,7 @@ return_type function_name (arguments of type T1, T2....)
 
 #### Example :
 [Function Template Restrictions](FunctionTemplateRestrictions.cpp)
-In the above example, we overload the ordinary functions. We cannot overload the generic functions as both the functions have different functionalities. First one is displaying the value and the second one determines whether the number is even or not.
-
-
+</br> In the above example, we overload the ordinary functions. We cannot overload the generic functions as both the functions have different functionalities. First one is displaying the value and the second one determines whether the number is even or not.
 
 
 ## Class Templates
