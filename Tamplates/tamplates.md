@@ -47,6 +47,41 @@ In this program, instead of calling a function by passing a value, a **call by r
 The ```Swap()``` function template takes two arguments and swaps them by reference.
 
 
+### Function Templates with Multiple Parameters of different types (in same function)
+
+We can use more than one generic type in the template function by using the comma to separate the list.
+
+#### Syntax:
+```
+ template<class T1, class T2,.....>  
+return_type function_name (arguments of type T1, T2....)  
+{  
+    // body of function.  
+}  
+```
+</br> In the above syntax, we have seen that the template function can accept any number of arguments of a different type.
+
+#### Example : 
+[Function Templates with Multiple Parameters of different types](FunctionTemplates_MultipleParametersOfDifferentTypes.cpp)
+</br> In the above example, we use two generic types in the template function, i.e., ```X``` and ```Y```.
+
+### Overloading a Function Template 
+</br> We can overload the generic function means that the overloaded template functions can differ in the parameter list.
+
+#### Example : 
+[Function Template Overloading](FunctionTemplateOverloading.cpp)
+</br> In the above example, template of ```fun()``` function is overloaded.
+
+### Restrictions of Generic Functions 
+</br> Generic functions perform the same operation for all the versions of a function except the data type differs. Let's see a simple example of an overloaded function which cannot be replaced by the generic function as both the functions have different functionalities.
+
+#### Example :
+[Function Template Restrictions](FunctionTemplateRestrictions.cpp)
+In the above example, we overload the ordinary functions. We cannot overload the generic functions as both the functions have different functionalities. First one is displaying the value and the second one determines whether the number is even or not.
+
+
+
+
 ## Class Templates
 Like function templates, you can also create class templates for generic class operations. When a class uses the concept of Template, then the class is known as generic class.
 
